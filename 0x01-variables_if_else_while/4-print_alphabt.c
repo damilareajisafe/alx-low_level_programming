@@ -10,7 +10,7 @@ int main(void)
 
 	while (alpha <= 122)
 	{
-		if (alpha == 101 || alpha == 71)
+		if (alpha == 101 || alpha == 113)
 			alpha++;
 		putchar(alpha);
 		alpha++;
