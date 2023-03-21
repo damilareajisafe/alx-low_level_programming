@@ -5,7 +5,7 @@
  *
  * @n: the integer
  *
- * Return: 0 (Success)
+ * Return: unsigned value of n (Success)
  */
 int _abs(int n)
 {
@@ -13,17 +13,15 @@ int _abs(int n)
 
 	if (n > 0)
 	{
-		_putchar(n);
+		return (n);
 	}
 	else if (n < 0)
 	{
 		num = -(n);
-		_putchar(num);
+		return (num);
 	}
 	else
 	{
-		_putchar(0);
+		return (0);
 	}
-
-	return (0);
 }
