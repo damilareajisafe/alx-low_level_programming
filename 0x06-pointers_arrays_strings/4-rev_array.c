@@ -10,21 +10,12 @@
 
 void reverse_array(int *a, int n)
 {
-	int *ptr = a;
-	int size = n + 0;
-	int new[size];
-	int i/*, j = n - 1*/;
+	int temp, i;
 
-	for (i = 0; *(ptr + i) != '\0'; i++)
-		*(new + i) = *(ptr + i);
-
-	/*while (j >= 0)
+	for (i = 0; i < (n / 2); i++)
 	{
-		*ptr++ = *(copy + j);
-		j--;
-	}*/
-	for (i = 0; i < n; i++)
-		printf("%d\n", new[i]);
-
-	*ptr = '\0';
+		temp = *(a + i);
+		*(a + i) = *(a + (n - 1) - i);
+		*(a + (n - 1) - i) = temp;
+	}
 }
