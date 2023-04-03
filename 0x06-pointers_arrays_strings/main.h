@@ -5,3 +5,6 @@ char *string_toupper(char *);
 char *_strncpy(char *dest, char *src, int n);
 int _strcmp(char *s1, char *s2);
 char *leet(char *);
+void print_number(int n);
+int _putchar(char c);
+int print_first_digit(int);
