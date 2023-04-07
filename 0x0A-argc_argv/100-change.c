@@ -3,7 +3,12 @@
 #include <stdlib.h>
 
 /**
- *
+ * main - prints the minimum number of coins to make change for an amount of
+ * money
+ * @argc: length of @argv
+ * @argv: an array of arguments of the program - here, contains the amount
+ * to make change for
+ * Return: 0 (success), 1 (error)
  */
 
 int main(int argc, char *argv[])
