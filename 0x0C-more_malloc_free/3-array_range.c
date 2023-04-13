@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * array_range - creates an array of integers whose content is arranged from min
- * to max
+ * array_range - creates an array of integers whose content is arranged from
+ * min to max
  * @min: smallest int
  * @max: largest int
  * Return: pointer to the newly created array or NULL if it fails
