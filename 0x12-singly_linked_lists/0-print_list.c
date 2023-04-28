@@ -9,8 +9,7 @@
 size_t print_list(const list_t *h)
 {
 	size_t count = 0;
-	list_t head = *h;
-	list_t *temp = &head;
+	list_t *temp = (list_t *)h;
 
 	while (temp != NULL)
 	{
