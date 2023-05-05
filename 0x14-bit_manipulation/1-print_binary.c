@@ -8,25 +8,24 @@
 
 void print_binary(unsigned long int n)
 {
-	char buffer[100];
-	int len = 0, i = 0;
-	int r;
+	unsigned long int x = 1;
 
 	if (n == 0)
 		_putchar('0');
 
-	while (n > 0)
+	while (n >= x)
+		x = x * 2;
+
+	while (x != 1)
 	{
-		r = n % 2;
-		n = n / 2;
-		buffer[i] = ('0' + r);
-		i++;
+		x = x / 2;
+
+		if (n >= x)
+		{
+			_putchar('1');
+			n = n - x;
+		}
+		else
+			_putchar('0');
 	}
-	buffer[i] = '\0';
-
-	for (i = 0; buffer[i] != '\0'; i++)
-		len++;
-
-	for (i = len - 1; i >= 0; i--)
-		_putchar(buffer[i]);
 }
