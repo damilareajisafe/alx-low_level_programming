@@ -12,10 +12,9 @@
 
 int main(int argc, char *argv[])
 {
-	int a = atoi(argv[1]);
-	int b = atoi(argv[3]);
+	int a, b;
 	int (*p)(int, int);
-	char operator = *argv[2];
+	char *operator;
 	int result;
 
 	if (argc != 4)
@@ -24,15 +23,19 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if ((operator == '/' || operator == '%') && b == 0)
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	operator = argv[2];
+
+	if ((*operator == '/' || *operator == '%') && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	p = get_op_func(&operator);
+	p = get_op_func(operator);
 
-	if (p == NULL)
+	if (p == NULL || operator[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
