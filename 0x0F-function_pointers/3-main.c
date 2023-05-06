@@ -23,18 +23,20 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	if (strchr("+-*%", operator) == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
+
 	if ((operator == '/' || operator == '%') && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 
-	p = get_op_func(argv[2]);
+	p = get_op_func(&operator);
+
+	if (p == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
 	result = p(a, b);
 	printf("%d\n", result);
 	return (0);
