@@ -37,12 +37,12 @@ int main(int ac, char **av)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
 		exit(99);
 	}
-	if (close(fdto) != 0)
+	if (close(fdto) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdto);
 		exit(100);
 	}
-	if (close(fdfrom) != 0)
+	if (close(fdfrom) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fdfrom);
 		exit(100);
