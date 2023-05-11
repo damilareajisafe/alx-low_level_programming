@@ -23,7 +23,7 @@ int main(int ac, char **av)
 		exit(97);
 	}
 	fdto = open(av[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-	fdfrom = open(av[1], O_RDWR);
+	fdfrom = open(av[1], O_RDONLY);
 	rdcount = read(fdfrom, buffer, 1024);
 	wrcount = write(fdto, buffer, rdcount);
 
